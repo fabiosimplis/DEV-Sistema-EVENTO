@@ -6,10 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Table(name = "tb_categoria")
 public class Categoria {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(columnDefinition = "TEXT")
     private String descricao;
